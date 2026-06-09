@@ -163,7 +163,6 @@ border-color:transparent;
 </div>
 
 <div id="garden">
-<div id="stem"></div>
 <div id="flower">🌷🩵</div>
 
 <div id="message">
@@ -204,31 +203,12 @@ function showMagic(){
 
 document.getElementById("garden").style.display="block";
 
-let stem=document.getElementById("stem");
-
-let h=0;
-
-let grow=setInterval(()=>{
-
-h+=4;
-
-stem.style.height=h+"px";
-
-if(h>=200){
-
-clearInterval(grow);
-
 document.getElementById("flower").style.transition="2s";
-
 document.getElementById("flower").style.transform="translateX(-50%) scale(1)";
 
 createHearts();
 
 setTimeout(typeMessage,1500);
-
-}
-
-},40);
 
 }
 
